@@ -4,7 +4,6 @@
 // When size is submitted by the user, call makeGrid()
 var size = document.querySelector('#sizePicker');
 var table = document.querySelector('#pixelCanvas');
-var color = document.querySelector('#colorPicker').value;
 
 
 
@@ -24,6 +23,7 @@ function makeGrid(event) {
       var c = document.createElement('td');
       // An event listener to fill the cells with one click.
       c.addEventListener('click', function(){
+           var color = document.querySelector('#colorPicker').value;
            this.style.backgroundColor = color;
       });
       // An event listener to clear the cells with a double click.
